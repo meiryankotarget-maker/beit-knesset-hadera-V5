@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    /* Pin the asset base to the site root so client-side history.pushState()
+       never shifts how relative /assets and /src URLs resolve. */
+    (function () {
+      if (document.querySelector('base')) return;
+      var dir = location.href.split('#')[0].split('?')[0].replace(/[^\/]*$/, '');
+      var b = document.createElement('base');
+      b.setAttribute('href', dir);
+      document.head.insertBefore(b, document.head.firstChild);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a2a2c" />
+  <title>בית הכנסת הגדול חדרה · תורה, תפילה וקהילה משנת 1936</title>
+  <meta name="description" content="בית הכנסת הגדול בחדרה — מוסד היסטורי משנת 1936, מגדל אור של תורה ותפילה בלב העיר. זמני תפילה, שיעורים, מורשת, אירועים ותרומות." />
+  <link rel="canonical" href="/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="בית הכנסת הגדול חדרה" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:title" content="בית הכנסת הגדול חדרה · תורה, תפילה וקהילה משנת 1936" />
+  <meta property="og:description" content="בית הכנסת הגדול בחדרה — מוסד היסטורי משנת 1936, מגדל אור של תורה ותפילה בלב העיר. זמני תפילה, שיעורים, מורשת, אירועים ותרומות." />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="/assets/hero-building.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="בית הכנסת הגדול חדרה · תורה, תפילה וקהילה משנת 1936" />
+  <meta name="twitter:description" content="בית הכנסת הגדול בחדרה — מוסד היסטורי משנת 1936, מגדל אור של תורה ותפילה בלב העיר. זמני תפילה, שיעורים, מורשת, אירועים ותרומות." />
+  <meta name="twitter:image" content="/assets/hero-building.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"בית הכנסת הגדול חדרה · תורה, תפילה וקהילה משנת 1936","description":"בית הכנסת הגדול בחדרה — מוסד היסטורי משנת 1936, מגדל אור של תורה ותפילה בלב העיר. זמני תפילה, שיעורים, מורשת, אירועים ותרומות.","inLanguage":"he","url":"/","isPartOf":{"@type":"WebSite","name":"בית הכנסת הגדול חדרה"}},{"@type":"WebSite","name":"בית הכנסת הגדול חדרה","inLanguage":"he"},{"@type":"PlaceOfWorship","name":"בית הכנסת הגדול חדרה","telephone":"04-633-4512","email":"info@hagadol-hadera.org.il","foundingDate":"1936","address":{"@type":"PostalAddress","streetAddress":"הגיבורים 74","addressLocality":"חדרה","addressCountry":"IL"}}]}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600&family=Assistant:wght@200;300;400;500;600&family=Frank+Ruhl+Libre:wght@500;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green-deep: #1F5B5E;
+      --green-darker: #0F3A3D;
+      --green-ink: #0A2A2C;
+      --gold: #B8923E;
+      --gold-light: #D4B88C;
+      --gold-soft: #E8D4A8;
+      --sand: #F3E9D3;
+      --earth: #6B4226;
+      --earth-soft: #8B5A3C;
+      --cream: #FAF6EF;
+      --cream-warm: #F5EEDD;
+      --ink: #1C1410;
+      --muted: #6E5F4F;
+      --muted-2: #8A7A66;
+      --line: rgba(184, 146, 62, 0.22);
+      --line-soft: rgba(107, 66, 38, 0.10);
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Heebo', 'Assistant', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16.5px;
+      font-weight: 300;
+      line-height: 1.7;
+      direction: rtl;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    body { overflow-x: hidden; }
+
+    h1, h2, h3, h4, .serif {
+      font-family: 'Heebo', 'Assistant', sans-serif;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: var(--green-ink);
+      line-height: 1.18;
+    }
+    p { font-weight: 300; line-height: 1.75; }
+
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    img { max-width: 100%; display: block; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: var(--cream-warm); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-light); border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+    /* Utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      html, body { font-size: 16px; }
+    }
+
+    /* Scroll reveals */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 800ms var(--ease), transform 800ms var(--ease), filter 1000ms var(--ease);
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-blur {
+      opacity: 0;
+      filter: blur(14px);
+      transform: translateY(24px) scale(1.02);
+      transition: opacity 1100ms var(--ease), filter 1300ms var(--ease), transform 1100ms var(--ease);
+    }
+    .reveal-blur.in {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0) scale(1);
+    }
+    .word-reveal { display: inline-block; overflow: hidden; vertical-align: top; }
+    .word-reveal > span {
+      display: inline-block;
+      transform: translateY(110%);
+      opacity: 0;
+      transition: transform 800ms var(--ease), opacity 800ms var(--ease);
+    }
+    .word-reveal.in > span {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Gold divider */
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 auto;
+    }
+    .gold-divider::before,
+    .gold-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to left, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+    }
+    .gold-divider .diamond {
+      width: 8px; height: 8px;
+      background: var(--gold);
+      transform: rotate(45deg);
+    }
+
+    /* Buttons — quiet, museum-style */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 28px;
+      border-radius: 0;
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      transition: all 280ms var(--ease);
+      cursor: pointer;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: var(--green-ink);
+      color: var(--cream);
+    }
+    .btn-primary:hover {
+      background: var(--gold);
+      color: #fff;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--cream);
+      border: 1px solid rgba(250, 246, 239, 0.65);
+    }
+    .btn-outline:hover {
+      border-color: var(--cream);
+      background: rgba(250, 246, 239, 0.08);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--green-ink);
+      border: 1px solid rgba(10, 42, 44, 0.4);
+    }
+    .btn-ghost:hover {
+      border-color: var(--green-ink);
+      background: rgba(10, 42, 44, 0.04);
+    }
+    /* Underline link */
+    .link-underline {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      font-weight: 400;
+      padding: 4px 0;
+    }
+    .link-underline::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 100%;
+      height: 1px;
+      background: currentColor;
+      transform-origin: right;
+      transition: transform 400ms var(--ease);
+    }
+    .link-underline:hover::after { transform: scaleX(0.4); }
+
+    /* Arabesque arches pattern border */
+    .arch-row {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+    }
+    .arch {
+      width: 16px;
+      height: 18px;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+
+    /* Card — flat, museum */
+    .card {
+      background: #fff;
+      border-radius: 0;
+      border: 1px solid var(--line-soft);
+      overflow: hidden;
+      transition: border-color 400ms var(--ease), transform 600ms var(--ease);
+    }
+    .card:hover {
+      border-color: rgba(184, 146, 62, 0.5);
+    }
+
+    /* Eyebrow */
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      font-weight: 400;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    /* Page transitions */
+    .page-fade {
+      animation: pageFadeIn 600ms var(--ease);
+    }
+    @keyframes pageFadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Loader */
+    #app-loader {
+      position: fixed;
+      inset: 0;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 400ms ease;
+    }
+    #app-loader.hidden { opacity: 0; pointer-events: none; }
+    #app-loader .spinner {
+      width: 44px; height: 44px;
+      border: 3px solid var(--gold-soft);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 900ms linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Selection */
+    ::selection { background: var(--gold); color: #fff; }
+
+    /* Ken Burns slow zoom — for cinematic hero images */
+    @keyframes kenBurnsZoom {
+      0%   { transform: scale(1.05); }
+      100% { transform: scale(1.18); }
+    }
+    .ken-burns {
+      animation: kenBurnsZoom 16s cubic-bezier(0.22, 1, 0.36, 1) infinite alternate;
+      will-change: transform;
+    }
+
+    /* Hero content reveal — shared by parasha list & detail heroes */
+    @keyframes parashaHeroFade {
+      from { opacity: 0; transform: translateY(-30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="app-loader"><div class="spinner"></div></div>
+  <div id="root"></div>
+  <noscript>
+  <div style="max-width:760px;margin:0 auto;padding:48px 24px;font-family:Heebo,Arial,sans-serif;direction:rtl;text-align:right;color:#1c1410">
+    <h1 style="color:#0a2a2c">בית הכנסת הגדול חדרה · תורה, תפילה וקהילה משנת 1936</h1>
+    <p>בית הכנסת הגדול בחדרה — מוסד היסטורי משנת 1936, מגדל אור של תורה ותפילה בלב העיר. זמני תפילה, שיעורים, מורשת, אירועים ותרומות.</p>
+    <nav aria-label="ניווט ראשי" style="margin-top:24px;line-height:2.2"><a href="/" style="color:#0a2a2c">בית הכנסת הגדול חדרה</a> · <a href="/about" style="color:#0a2a2c">אודות</a> · <a href="/prayer-times" style="color:#0a2a2c">זמני תפילה וזמני היום</a> · <a href="/gallery" style="color:#0a2a2c">גלריה וזיכרון</a> · <a href="/%D7%A4%D7%A8%D7%A9%D7%AA-%D7%94%D7%A9%D7%91%D7%95%D7%A2" style="color:#0a2a2c">פרשת השבוע</a> · <a href="/heritage" style="color:#0a2a2c">מורשת ואדריכלות</a> · <a href="/memorial" style="color:#0a2a2c">הנצחות וזיכרון</a> · <a href="/contact" style="color:#0a2a2c">צור קשר</a> · <a href="/donate" style="color:#0a2a2c">תרומות</a></nav>
+  </div>
+</noscript>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <!-- SEO / content single-source modules (plain JS, must load before the app) -->
+  <script src="content/site.js"></script>
+  <script src="content/pages.js"></script>
+  <script src="content/parshiot.js"></script>
+  <script src="seo/generate.js"></script>
+
+  <script type="text/babel" src="src/data.jsx"></script>
+  <script type="text/babel" src="src/hebcal-api.jsx"></script>
+  <script type="text/babel" src="src/icons.jsx"></script>
+  <script type="text/babel" src="src/shared.jsx"></script>
+  <script type="text/babel" src="src/router.jsx"></script>
+  <script type="text/babel" src="src/Header.jsx"></script>
+  <script type="text/babel" src="src/Footer.jsx"></script>
+  <script type="text/babel" src="src/Home.jsx"></script>
+  <script type="text/babel" src="src/About.jsx"></script>
+  <script type="text/babel" src="src/Times.jsx"></script>
+  <script type="text/babel" src="src/Gallery.jsx"></script>
+  <script type="text/babel" src="src/ParashaWeek.jsx"></script>
+  <script type="text/babel" src="src/Heritage.jsx"></script>
+  <script type="text/babel" src="src/Memorial.jsx"></script>
+  <script type="text/babel" src="src/Donate.jsx"></script>
+  <script type="text/babel" src="src/Contact.jsx"></script>
+  <script type="text/babel" src="src/App.jsx"></script>
+</body>
+</html>

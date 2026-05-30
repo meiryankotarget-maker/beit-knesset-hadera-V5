@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# הוסף דומיין ב-content/site.js כדי לקבל כתובת Sitemap מלאה
+Sitemap: /sitemap.xml
