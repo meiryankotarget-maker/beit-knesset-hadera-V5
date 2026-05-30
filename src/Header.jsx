@@ -132,7 +132,7 @@ const Header = ({ currentPage, navigate }) => {
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'flex-start',
-              padding: '14px 10px 22px',
+              padding: '14px 6px 20px',
               zIndex: 110,
               border: '1px solid rgba(184, 146, 62, 0.25)',
               borderTop: 'none',
@@ -141,9 +141,9 @@ const Header = ({ currentPage, navigate }) => {
             }}>
             
             <img
-              src="assets/logo.png"
+              src="assets/logo-clear.png"
               alt="לוגו בית הכנסת הגדול חדרה"
-              style={{ width: 110, height: 110, objectFit: 'contain' }} />
+              style={{ width: 120, height: 120, objectFit: 'contain' }} />
             
             <div style={{
               marginTop: 4,
@@ -208,8 +208,8 @@ const Header = ({ currentPage, navigate }) => {
         @media (max-width: 1100px) {
           .desktop-nav { display: none !important; }
           .mobile-burger { display: inline-flex !important; }
-          .logo-capsule { width: 100px !important; height: 132px !important; padding: 10px 8px 16px !important; left: 16px !important; }
-          .logo-capsule img { width: 82px !important; height: 82px !important; }
+          .logo-capsule { width: 100px !important; height: 132px !important; padding: 10px 5px 14px !important; left: 16px !important; }
+          .logo-capsule img { width: 90px !important; height: 90px !important; }
         }
         @media (min-width: 1101px) {
           .mobile-burger { display: none !important; }
@@ -217,7 +217,7 @@ const Header = ({ currentPage, navigate }) => {
         @media (max-width: 520px) {
           .desktop-donate { font-size: 11px !important; padding: 9px 14px !important; }
           .logo-capsule { width: 84px !important; height: 112px !important; }
-          .logo-capsule img { width: 68px !important; height: 68px !important; }
+          .logo-capsule img { width: 74px !important; height: 74px !important; }
           .logo-capsule div { font-size: 8px !important; }
         }
       `}</style>
