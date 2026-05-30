@@ -327,5 +327,35 @@
   <script type="text/babel" src="src/Donate.jsx"></script>
   <script type="text/babel" src="src/Contact.jsx"></script>
   <script type="text/babel" src="src/App.jsx"></script>
+
+  <!-- Boot watchdog: never let the loader spin forever; explain file:// failures -->
+  <script>
+    (function () {
+      function help(title, body) {
+        var l = document.getElementById('app-loader');
+        if (!l) return;
+        l.innerHTML = '<div style="max-width:560px;text-align:center;font-family:Heebo,Assistant,Arial,sans-serif;color:#0a2a2c;direction:rtl;padding:28px">'
+          + '<div style="font-size:19px;font-weight:600;margin-bottom:12px">' + title + '</div>'
+          + '<div style="font-size:14.5px;line-height:1.85;color:#6e5f4f">' + body + '</div></div>';
+      }
+      function booted() { var r = document.getElementById('root'); return r && r.children.length > 0; }
+      var code = 'style="background:#f0e9da;padding:2px 8px;border-radius:4px;display:inline-block;margin-top:6px"';
+      if (location.protocol === 'file:') {
+        help('צריך להריץ דרך שרת',
+          'הקובץ נפתח ישירות מהדיסק (file://), והדפדפן חוסם טעינת רכיבי האתר במצב זה.<br>' +
+          'העלו את התיקייה ל‑Vercel, או הריצו מקומית שרת פשוט מתוך תיקיית הפרויקט:<br>' +
+          '<code ' + code + '>npx serve</code>&nbsp; או &nbsp;<code ' + code + '>python -m http.server</code>');
+        return;
+      }
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          if (!booted()) {
+            help('האתר לא נטען',
+              'טעינת רכיבי האתר נכשלה. ודאו שכל הקבצים הועלו (התיקיות <code>src</code>, <code>content</code>, <code>seo</code> והנכסים) ושיש חיבור לאינטרנט.');
+          }
+        }, 8000);
+      });
+    })();
+  </script>
 </body>
 </html>
